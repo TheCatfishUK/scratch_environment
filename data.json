@@ -1,0 +1,22 @@
+{
+    "cell_520_sub": {
+        "name": "Cell 520 Sub",
+        "produces": "500 Cores etc.",
+        "team": "Red Team",
+        "team_leader": "Sarge",
+        "snr_assr": "Grif",
+        "signed_off": ["Simmons"],
+        "other_info": [],
+        "cell_status": 0
+    },
+    "cell_620_sub": {
+        "name": "Cell 620 Sub",
+        "produces": "600 Cores etc.",
+        "team": "Blue Team",
+        "team_leader": "Church",
+        "snr_assr": "Tucker",
+        "signed_off": ["Caboose", "Tex"],
+        "other_info": [],
+        "cell_status": 1
+    }
+}
