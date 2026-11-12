@@ -76,14 +76,25 @@ def xyz(u,v):
             y = math.floor(u/2) - v
             z = 0
 
-    print(x, y, z)
-    print(zero_shortest(x, y, z))
+    return(zero_shortest(x, y, z))
     
 for i in range(10):
     u = random.randint(0,6)
     v = random.randint(-3,3)
     print("[", u, ",", v, "]")
-    xyz(u, v)
+    print(xyz(u, v))
     print("\n___\n")
+    
+u = input("U:")
+v = input("V:")
+
+#coordinates = []
+
+#for j in range(-10,11):
+#    coordinates.append([])
+#    for i in range(-10,11):
+#        coordinates[j+10].append(xyz(i,j))
+
+#print(coordinates)
 
 input("Press enter to quit...") 
