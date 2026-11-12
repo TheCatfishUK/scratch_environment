@@ -1,4 +1,5 @@
 import math
+import random
 
 def zero_shortest(x, y, z):
     coo = [x, y, z]
@@ -37,7 +38,6 @@ def zero_y(c):
     
     return([x+y, 0, z+y])
     
-    
 def zero_z(c):
     x=int(c[0])
     y=int(c[1])
@@ -51,28 +51,39 @@ def xyz(u,v):
     
     if u == 0:
         x = 0
-        y = -1 * v
+        y = -v
         z = 0
     
     elif abs(v) == math.ceil(abs(u)/2):
-        x = -1* u 
-        y = 0
-        z = 0
+        
+        if v/abs(v) == u/abs(u): 
+            x = -u
+            y = 0
+            z = 0  
+        else:   
+            x = 0
+            y = 0 
+            z = u
+            
     
-    elif u < 0:
-        x = u * -1
-        y = math.floor(u/2) - v
-        z = 0
     else:
-        x = 10
-        y = v * -1
-        z = u * -1
-    
+        if u < 0:
+            x = -1 * u
+            y = math.floor(u/2) - v
+            z = 0
+        else:
+            x = -u
+            y = math.floor(u/2) - v
+            z = 0
+
+    print(x, y, z)
     print(zero_shortest(x, y, z))
+    
+for i in range(10):
+    u = random.randint(0,6)
+    v = random.randint(-3,3)
+    print("[", u, ",", v, "]")
+    xyz(u, v)
+    print("\n___\n")
 
-u = input("U: ")
-v = input("V: ")
-
-xyz(u, v)
-
-input("Press any key to quit...") 
+input("Press enter to quit...") 
